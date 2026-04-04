@@ -114,6 +114,67 @@ button:active {
   transform: scale(0.98);
 }
 
+/* Contact Section Layout */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Form Styling */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.input-group input, 
+.input-group textarea {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.2);
+}
+
+/* Map Styling */
+.contact-map {
+    padding: 10px; /* Slimmer padding for the map card */
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr; /* Stacks form and map on top of each other */
+    }
+    
+    .contact-map {
+        height: 300px;
+    }
+}
+
 footer {
   text-align: center;
   padding: 3rem 1rem;
