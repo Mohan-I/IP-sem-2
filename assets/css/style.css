@@ -1,5 +1,5 @@
 :root {
-  --primary: #38bdf8;
+  --primary: #38f8c5;
   --primary-hover: #0ea5e9;
   --bg-main: #0f172a;
   --bg-card: #1e293b;
@@ -9,13 +9,28 @@
   --transition: all 0.3s ease;
 }
 
+@font-face {
+    font-family: 'Gloria' ;
+    src: url('../fonts/GloriaHallelujah-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'AnotherHand';
+    src: url('../fonts/JustAnotherHand-Regular.ttf');
+}
+
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Gloria', sans-serif;
   line-height: 1.6;
   margin: 0;
   background-color: var(--bg-main);
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
+}
+
+a{
+ color: springgreen;
+ text-decoration: none;
 }
 
 /* Header with a subtle bottom border */
@@ -67,8 +82,9 @@ section {
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: 'AnotherHand', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
   margin-top: 0;
   color: var(--primary);
   display: flex;
