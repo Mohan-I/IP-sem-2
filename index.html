@@ -11,20 +11,46 @@
 
 <body>
 
-    <header>
-        <h1>MOHAN SHAILENDRA YADAV</h1>
-        <p>Full Stack Engineer | MCA Candidate at TCET</p>
-        <div class="contact-info">
-            <span>📍 Mumbai, India</span> |
-            <span>📧 <a href="mailto:mohanshyadav@gmail.com">mohanshyadav@gmail.com</a></span> |
-            <span>📞 +91 93247 73179</span>
-        </div>
-        <div style="margin-top: 20px;">
-            <button onclick="window.location.href='mailto:mohanshyadav@gmail.com'">Get In Touch</button>
-        </div>
+    <header class="navbar">
+        <nav class="nav-container">
+            <a href="#" class="logo">MY<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#summary">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </header>
 
+
     <main>
+        <div id="hero">
+            <div class="hero-card">
+
+                <h1>MOHAN SHAILENDRA YADAV</h1>
+                <p>Full Stack Engineer | MCA Candidate at TCET</p>
+                <div class="contact-info">
+                    <span>📍 Mumbai, India</span> |
+                    <span>📧 <a href="mailto:mohanshyadav@gmail.com">mohanshyadav@gmail.com</a></span> |
+                    <span>📞 +91 93247 73179</span>
+                </div>
+                <div style="margin-top: 20px;">
+                    <button onclick="window.location.href='mailto:mohanshyadav@gmail.com'">Get In Touch</button>
+                </div>
+            </div>
+
+        </div>
+
         <section id="summary">
             <h2>Professional Summary</h2>
             <div class="card">
@@ -137,6 +163,7 @@
         <hr width="50%" />
     </footer>
 
+    <script src="./assets/javascript/main.js"></script>
 </body>
 
 </html>

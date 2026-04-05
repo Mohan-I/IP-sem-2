@@ -19,6 +19,10 @@
     src: url('../fonts/JustAnotherHand-Regular.ttf');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Gloria', sans-serif;
   line-height: 1.6;
@@ -114,7 +118,126 @@ button:active {
   transform: scale(0.98);
 }
 
+/* ----------------------------------------------------------- */
+/* Navbar Styling */
+/* ----------------------------------------------------------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(2, 6, 23, 0.8); /* Dark semi-transparent */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary); /* That blue we used earlier */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Responsive Mobile Menu */
+@media (max-width: 768px) {
+    
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
+    }
+    /* Create the 'drawer' effect */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust based on navbar height */
+        left: -100%; /* Hidden off-screen to the left */
+        width: 100%;
+        background: var(--bg-header);
+        transition: 0.3s ease;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* When JavaScript adds the .active class, slide it in! */
+    .nav-links.active {
+        left: 0;
+    }
+
+    /* Animate the hamburger into an 'X' */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* ----------------------------------------------------------- */
+/* Hero Section Layout */
+/* ----------------------------------------------------------- */
+#hero {
+  height: 100dvh;
+  width: 100%;
+  padding-top: 120px; /* Space for the fixed navbar */
+  text-align: center;
+  
+  /* Background Properties */
+  background-image: url('../images/hero-bg.png');
+  background-repeat: no-repeat;
+  background-position: center center; /* Centers the image */
+  background-size: cover; /* This is the fix for "attachment: cover" */
+  
+  /* Optional: Background Overlay */
+  /* This makes the text easier to read if the image is too bright */
+  background-blend-mode: overlay;
+  background-color: rgba(2, 6, 23, 0.7); 
+}
+/* ----------------------------------------------------------- */
 /* Contact Section Layout */
+/* ----------------------------------------------------------- */
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -174,6 +297,10 @@ button:active {
         height: 300px;
     }
 }
+
+/* ----------------------------------------------------------- */
+/* Footer */
+/* ----------------------------------------------------------- */
 
 footer {
   text-align: center;
