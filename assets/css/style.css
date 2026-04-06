@@ -10,17 +10,17 @@
 }
 
 @font-face {
-    font-family: 'Gloria' ;
-    src: url('../fonts/GloriaHallelujah-Regular.ttf');
+  font-family: 'Gloria';
+  src: url('../fonts/GloriaHallelujah-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'AnotherHand';
-    src: url('../fonts/JustAnotherHand-Regular.ttf');
+  font-family: 'AnotherHand';
+  src: url('../fonts/JustAnotherHand-Regular.ttf');
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,9 +32,23 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a{
- color: springgreen;
- text-decoration: none;
+a {
+  color: springgreen;
+  text-decoration: none;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-header);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 12px;
 }
 
 /* Header with a subtle bottom border */
@@ -96,6 +110,18 @@ h2 {
   gap: 10px;
 }
 
+.badge {
+  background: rgba(198, 230, 226, 0.12);
+  border-radius: 40px;
+  padding: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary);
+  border: 1px solid rgba(45, 212, 191, 0.25);
+}
+
 /* Improved Button States */
 button {
   padding: 12px 24px;
@@ -123,95 +149,109 @@ button:active {
 /* ----------------------------------------------------------- */
 
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(2, 6, 23, 0.8); /* Dark semi-transparent */
-    backdrop-filter: blur(10px); /* Glass effect */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 1000;
-    padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2, 6, 23, 0.8);
+  /* Dark semi-transparent */
+  backdrop-filter: blur(10px);
+  /* Glass effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  padding: 15px 0;
 }
 
 .nav-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: white;
-    text-decoration: none;
-    letter-spacing: -1px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -1px;
 }
 
 .logo span {
-    color: var(--primary); /* That blue we used earlier */
+  color: var(--primary);
+  /* That blue we used earlier */
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+  display: flex;
+  list-style: none;
+  gap: 30px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: var(--transition);
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
 .nav-links a:hover {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 /* Responsive Mobile Menu */
 @media (max-width: 768px) {
-    
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
 
-    .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        background-color: white;
-        transition: all 0.3s ease-in-out;
-    }
-    /* Create the 'drawer' effect */
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px; /* Adjust based on navbar height */
-        left: -100%; /* Hidden off-screen to the left */
-        width: 100%;
-        background: var(--bg-header);
-        transition: 0.3s ease;
-        text-align: center;
-        padding: 20px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
 
-    /* When JavaScript adds the .active class, slide it in! */
-    .nav-links.active {
-        left: 0;
-    }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
 
-    /* Animate the hamburger into an 'X' */
-    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
-    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  /* Create the 'drawer' effect */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    /* Adjust based on navbar height */
+    left: -100%;
+    /* Hidden off-screen to the left */
+    width: 100%;
+    background: var(--bg-header);
+    transition: 0.3s ease;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* When JavaScript adds the .active class, slide it in! */
+  .nav-links.active {
+    left: 0;
+  }
+
+  /* Animate the hamburger into an 'X' */
+  .menu-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
 /* ----------------------------------------------------------- */
@@ -220,82 +260,219 @@ button:active {
 #hero {
   height: 100dvh;
   width: 100%;
-  padding-top: 120px; /* Space for the fixed navbar */
+  padding-top: 120px;
+  /* Space for the fixed navbar */
   text-align: center;
-  
+
   /* Background Properties */
   background-image: url('../images/hero-bg.png');
   background-repeat: no-repeat;
-  background-position: center center; /* Centers the image */
-  background-size: cover; /* This is the fix for "attachment: cover" */
-  
+  background-position: center center;
+  /* Centers the image */
+  background-size: cover;
+  /* This is the fix for "attachment: cover" */
+
   /* Optional: Background Overlay */
   /* This makes the text easier to read if the image is too bright */
   background-blend-mode: overlay;
-  background-color: rgba(2, 6, 23, 0.7); 
+  background-color: rgba(2, 6, 23, 0.7);
 }
+
+
+/* ----------------------------------------------------------- */
+/* Skill Section Layout */
+/* ----------------------------------------------------------- */
+
+/* Slider Wrapper */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Masking gradient to fade edges */
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #0f172a, transparent);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #0f172a, transparent);
+}
+
+/* The Moving Track */
+.skill-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.skill-track:hover {
+  animation-play-state: paused;
+  /* Pause on hover so people can read */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Brand Colors & Badge Styling */
+.skill-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.7rem 1.4rem;
+  border-radius: 50px;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1);
+}
+
+/* Specific Colors */
+.java {
+  color: #f89820;
+  background: rgba(248, 152, 32, 0.1);
+  border-color: rgba(248, 152, 32, 0.3);
+}
+
+.js {
+  color: #f7df1e;
+  background: rgba(247, 223, 30, 0.1);
+  border-color: rgba(247, 223, 30, 0.3);
+}
+
+.react {
+  color: #61dafb;
+  background: rgba(97, 218, 251, 0.1);
+  border-color: rgba(97, 218, 251, 0.3);
+}
+
+.node {
+  color: #68a063;
+  background: rgba(104, 160, 99, 0.1);
+  border-color: rgba(104, 160, 99, 0.3);
+}
+
+.db {
+  color: #00758f;
+  background: rgba(0, 117, 143, 0.1);
+  border-color: rgba(0, 117, 143, 0.3);
+}
+
+.aws {
+  color: #ff9900;
+  background: rgba(255, 153, 0, 0.1);
+  border-color: rgba(255, 153, 0, 0.3);
+}
+
+.git {
+  color: #f05032;
+  background: rgba(240, 80, 50, 0.1);
+  border-color: rgba(240, 80, 50, 0.3);
+}
+
+.design {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.security {
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
 /* ----------------------------------------------------------- */
 /* Contact Section Layout */
 /* ----------------------------------------------------------- */
 
 .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 /* Form Styling */
 .input-group {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group label {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
 }
 
-.input-group input, 
+.input-group input,
 .input-group textarea {
-    background: #0f172a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 12px;
-    border-radius: 6px;
-    color: white;
-    font-family: inherit;
-    transition: var(--transition);
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 6px;
+  color: white;
+  font-family: inherit;
+  transition: var(--transition);
 }
 
-.input-group input:focus, 
+.input-group input:focus,
 .input-group textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 5px rgba(56, 189, 248, 0.2);
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.2);
 }
 
 /* Map Styling */
 .contact-map {
-    padding: 10px; /* Slimmer padding for the map card */
-    min-height: 350px;
-    overflow: hidden;
+  padding: 10px;
+  /* Slimmer padding for the map card */
+  min-height: 350px;
+  overflow: hidden;
 }
 
 .submit-btn {
-    width: 100%;
-    margin-top: 10px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr; /* Stacks form and map on top of each other */
-    }
-    
-    .contact-map {
-        height: 300px;
-    }
+  .contact-container {
+    grid-template-columns: 1fr;
+    /* Stacks form and map on top of each other */
+  }
+
+  .contact-map {
+    height: 300px;
+  }
 }
 
 /* ----------------------------------------------------------- */
