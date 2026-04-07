@@ -7,6 +7,10 @@
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --transition: all 0.3s ease;
+  --metal-shiny: #e2e8f0;
+  --metal-dark: #475569;
+  --metal-border: #94a3b8;
+  --chrome-text: #f8fafc;
 }
 
 @font-face {
@@ -49,6 +53,32 @@ a {
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 12px;
+}
+
+/* Full screen container */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #020617; /* Match your site's dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Higher than navbar and everything else */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader img {
+    width: 100px; /* Adjust size based on your GIF */
+    height: auto;
+}
+
+/* Class to hide the loader via JavaScript */
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Header with a subtle bottom border */
@@ -278,6 +308,227 @@ button:active {
   background-color: rgba(2, 6, 23, 0.7);
 }
 
+/* ----------------------------------------------------------- */
+/* Proffesional Summary Section Layout */
+/* ----------------------------------------------------------- */
+
+/* Layout Container */
+.summary-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.summary-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.summary-text {
+    flex: 1.5; /* Gives more space to the text */
+}
+
+/* Your Specific Animation Styles (Integrated) */
+.outer {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 1px;
+    background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
+    position: relative;
+}
+
+.dot {
+    width: 5px;
+    aspect-ratio: 1;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ffffff;
+    border-radius: 100px;
+    z-index: 2;
+    right: 10%;
+    top: 10%;
+    animation: moveDot 6s linear infinite;
+}
+
+@keyframes moveDot {
+    0%, 100% { top: 10%; right: 10%; }
+    25% { top: 10%; right: calc(100% - 35px); }
+    50% { top: calc(100% - 30px); right: calc(100% - 35px); }
+    75% { top: calc(100% - 30px); right: 10%; }
+}
+
+.card-animated {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    border: solid 1px #202222;
+    background: radial-gradient(circle 280px at 0% 0%, #444444, #0c0d0d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    color: #fff;
+}
+
+.card-animated .text {
+    font-weight: bolder;
+    font-size: 3rem; /* Slightly smaller for better fit */
+    background: linear-gradient(45deg, #000000 4%, #fff, #000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.ray {
+    width: 220px;
+    height: 45px;
+    border-radius: 100px;
+    position: absolute;
+    background-color: #c7c7c7;
+    opacity: 0.4;
+    box-shadow: 0 0 50px #fff;
+    filter: blur(10px);
+    transform-origin: 10%;
+    top: 0%;
+    left: 0;
+    transform: rotate(40deg);
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #2c2c2c;
+}
+.topl { top: 10%; background: linear-gradient(90deg, #888888 30%, #1d1f1f 70%); }
+.bottoml { bottom: 10%; }
+.leftl { left: 10%; width: 1px; height: 100%; background: linear-gradient(180deg, #747474 30%, #222424 70%); }
+.rightl { right: 10%; width: 1px; height: 100%; }
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .summary-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .summary-text h2 {
+        text-align: center;
+    }
+}
+
+/*  */
+
+.parent {
+  width: 320px;
+  padding: 20px;
+  perspective: 1200px; /* Increased for deeper 3D effect */
+}
+
+.card.metallic {
+  padding-top: 50px;
+  border: 1px solid var(--metal-border);
+  transform-style: preserve-3d;
+  /* Brushed Metal Texture */
+  background: linear-gradient(
+    45deg,
+    #1e293b 0%, 
+    #334155 50%, 
+    #1e293b 100%
+  );
+  background-size: 100% 100%;
+  box-shadow: 
+    rgba(0, 0, 0, 0.5) 0px 30px 60px -12px,
+    inset rgba(255, 255, 255, 0.1) 0px 1px 1px 0px;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover {
+  transform: rotate3d(0.5, 1, 0, 25deg);
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 50px 100px -20px;
+}
+
+.content-box {
+  /* Metallic Chrome Gradient */
+  background: linear-gradient(135deg, #cbd5e1 0%, #f8fafc 45%, #94a3b8 55%, #f1f5f9 100%);
+  transition: all 0.5s ease-in-out;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+  border-top: 1px solid #fff;
+}
+
+.content-box .card-title {
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translate3d(0px, 0px, 50px);
+  /* Text shadow for a "engraved" look */
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+}
+
+.content-box .card-content {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.5;
+  transform: translate3d(0px, 0px, 30px);
+}
+
+.content-box .see-more {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: 800;
+  font-size: 10px;
+  color: #fff;
+  background: #0f172a;
+  padding: 0.6rem 1rem;
+  border: 1px solid #334155;
+  transform: translate3d(0px, 0px, 40px);
+  transition: 0.3s;
+}
+
+.content-box .see-more:hover {
+  background: #334155;
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.date-box {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  height: 65px;
+  width: 65px;
+  background: #0f172a;
+  border: 2px solid var(--metal-border);
+  padding: 10px;
+  transform: translate3d(0px, 0px, 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+}
+
+.date-box .month {
+  color: var(--metal-border);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.date-box .date {
+  font-size: 22px;
+  font-weight: 900;
+  color: #f8fafc;
+}
+
 
 /* ----------------------------------------------------------- */
 /* Skill Section Layout */
@@ -407,6 +658,124 @@ button:active {
   color: #a855f7;
   background: rgba(168, 85, 247, 0.1);
   border-color: rgba(168, 85, 247, 0.3);
+}
+
+/* ----------------------------------------------------------- */
+/* Newsletter Section Layout */
+/* ----------------------------------------------------------- */
+
+#newsletter {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_newsletter {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Wider for desktop readability */
+    width: 100%;
+}
+
+.container-input-wrapper {
+    position: relative;
+    display: flex;
+    background: linear-gradient(to bottom right, #4f4f4f, #1a1a1a);
+    border-radius: 16px;
+    padding: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.container-input-wrapper:focus-within {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3); /* Glow on focus */
+}
+
+.inner-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(10, 10, 10, 0.9);
+    border-radius: 15px;
+    width: 100%;
+}
+
+.input-area input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btns-add {
+    display: flex;
+    gap: 12px;
+}
+
+.btns-add button {
+    color: rgba(255, 255, 255, 0.3);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btns-add button:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.btn-submit {
+    background: linear-gradient(to top, #292929, #555555);
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-submit i {
+    display: flex;
+    padding: 6px;
+    color: #ccc;
+}
+
+.btn-submit:hover i {
+    color: white;
+}
+
+.tags {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.tags span {
+    padding: 5px 12px;
+    background: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 11px;
+    color: #888;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tags span:hover, .tags .tag-active {
+    border-color: var(--primary);
+    color: white;
+    background: rgba(56, 189, 248, 0.1);
 }
 
 /* ----------------------------------------------------------- */
