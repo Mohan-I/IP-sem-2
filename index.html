@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohan Shailendra Yadav | Full Stack Engineer</title>
+    <title>Mohan Shailendra Yadav | Artist Web Template</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -12,15 +12,15 @@
 </head>
 
 <body>
-<div class="loader-wrapper">
-    <div class="loader">
-        <img src="./assets/images/loader.gif" alt="Loading..." />
+    <div class="loader-wrapper">
+        <div class="loader">
+            <img src="./assets/images/loader.gif" alt="Loading..." />
+        </div>
     </div>
-</div>
 
     <header class="navbar">
         <nav class="nav-container">
-            <a href="#" class="logo">MY<span>.</span></a>
+            <a href="#" class="logo">Artist<span>.</span></a>
 
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
@@ -30,114 +30,166 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div></div>
+            <div></div>
+            <div></div>
+            <button onclick="window.location.href='mailto:mohanshyadav@gmail.com'"><i
+                    class="fa-solid fa-arrow-right-from-bracket"></i></button>
 
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+
         </nav>
     </header>
 
 
     <main>
-        <div id="hero">
-            <div class="hero-card">
+        <section id="hero">
+            <div class="hero-container">
+                <div class="hero-text-side animate-slide-left">
+                    <h1>The Artist <br /><u>Engineer</u></h1>
+                    <br />
+                    <p class="subtitle">Full Stack Engineer | Graphic Designer | MCA @ TCET</p>
 
-                <h1>MOHAN SHAILENDRA YADAV</h1>
-                <p>Full Stack Engineer | MCA Candidate at TCET</p>
-                <div class="contact-info">
-                    <span>📍 Mumbai, India</span> |
-                    <span>📧 <a href="mailto:mohanshyadav@gmail.com">mohanshyadav@gmail.com</a></span> |
-                    <span>📞 +91 93247 73179</span>
+                    <div class="contact-info">
+                        <span>📍 Mumbai, India</span> |
+                        <span>📧 <a href="mailto:example@gmail.com">example@gmail.com</a></span>
+                    </div>
                 </div>
-                <div style="margin-top: 20px;">
-                    <button onclick="window.location.href='mailto:mohanshyadav@gmail.com'">Get In Touch</button>
-                </div>
-            </div>
 
-        </div>
-<section id="summary" data-aos="fade-up">
-    <div class="summary-container">
-        <div class="summary-visual">
-            <div class="outer">
-                <div class="dot"></div>
-                <div class="card-animated">
-                    <div class="ray"></div>
-                    <div class="text">MCA</div>
-                    <div>Student</div>
-                    <div class="line topl"></div>
-                    <div class="line leftl"></div>
-                    <div class="line bottoml"></div>
-                    <div class="line rightl"></div>
+                <div class="hero-image-side animate-slide-right">
+                    <div class="image-wrapper">
+                        <img src="./assets/images/hero-img.png" alt="Mohan Yadav">
+                    </div>
+                    
+                    <div class="newsletter-box">
+                        <p>Stay updated with my latest projects</p>
+                        <form class="newsletter-form input-group">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit">Get In Touch</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="summary-text">
-            <h2>Professional Summary</h2>
-            <div class="card">
-                <p>
-                    Dynamic <strong class="badge">MCA Student</strong> and <strong class="badge">Full Stack
-                    Engineer</strong> with a focus on building scalable, secure web applications.
-                    Proven track record in implementing **OAuth 2.0** security protocols and developing 
-                    high-performance CRM systems.
-                </p>
-                <p style="margin-top: 15px;">
-                    Passionate about **Data Structures & Algorithms** and creating seamless UI/UX 
-                    experiences with modern JavaScript frameworks.
-                </p>
+        <div class="slider-container">
+            <div class="skill-track">
+                <span class="skill-badge java"><i class="fab fa-java"></i> Java</span>
+                <span class="skill-badge js"><i class="fab fa-js"></i> JavaScript/TS</span>
+                <span class="skill-badge react"><i class="fab fa-react"></i> React/Next.js</span>
+                <span class="skill-badge node"><i class="fab fa-node-js"></i> Node.js</span>
+                <span class="skill-badge db"><i class="fas fa-database"></i> SQL/NoSQL</span>
+                <span class="skill-badge aws"><i class="fab fa-aws"></i> AWS</span>
+                <span class="skill-badge java"><i class="fab fa-java"></i> Java</span>
+                <span class="skill-badge js"><i class="fab fa-js"></i> JavaScript/TS</span>
+                <span class="skill-badge react"><i class="fab fa-react"></i> React/Next.js</span>
+                <span class="skill-badge node"><i class="fab fa-node-js"></i> Node.js</span>
+                <span class="skill-badge db"><i class="fas fa-database"></i> SQL/NoSQL</span>
+                <span class="skill-badge aws"><i class="fab fa-aws"></i> AWS</span>
             </div>
         </div>
-    </div>
-</section>
 
-<section id="" >
-    <div class="parent">
-  <div class="card metallic">
-    <div class="content-box">
-      <span class="card-title">Team Handling</span>
-      <p class="card-content">
-        Expertise in leading cross-functional teams, optimizing workflows, and fostering a collaborative engineering culture.
-      </p>
-      <span class="see-more">View Projects</span>
-    </div>
-    <div class="date-box">
-      <span class="month">EXP</span>
-      <span class="date">04</span> </div>
-  </div>
-</div>
 
-<div class="parent">
-  <div class="card metallic">
-    <div class="content-box">
-      <span class="card-title">Team Handling</span>
-      <p class="card-content">
-        Expertise in leading cross-functional teams, optimizing workflows, and fostering a collaborative engineering culture.
-      </p>
-      <span class="see-more">View Projects</span>
-    </div>
-    <div class="date-box">
-      <span class="month">EXP</span>
-      <span class="date">04</span> </div>
-  </div>
-</div>
 
-<div class="parent">
-  <div class="card metallic">
-    <div class="content-box">
-      <span class="card-title">Team Handling</span>
-      <p class="card-content">
-        Expertise in leading cross-functional teams, optimizing workflows, and fostering a collaborative engineering culture.
-      </p>
-      <span class="see-more">View Projects</span>
-    </div>
-    <div class="date-box">
-      <span class="month">EXP</span>
-      <span class="date">04</span> </div>
-  </div>
-</div>
-</section>
+        <section id="summary" data-aos="fade-up">
+            <div class="summary-container">
+                <div class="summary-visual">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card-animated">
+                            <div class="ray"></div>
+                            <div class="text">Sketch</div>
+                            <div>Artist</div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-text">
+                    <h2>Professional Summary</h2>
+                    <h4 class="subheading">Just Something About Me....</h4>
+                    <div class="card">
+                        <p>
+                            Dynamic <strong class="badge">MCA Student</strong> and <strong class="badge">Full Stack
+                                Engineer</strong> with a focus on building scalable, secure web applications.
+                            Proven track record in implementing **OAuth 2.0** security protocols and developing
+                            high-performance CRM systems.
+                        </p>
+                        <p style="margin-top: 15px;">
+                            Passionate about **Data Structures & Algorithms** and creating seamless UI/UX
+                            experiences with modern JavaScript frameworks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="professional-summary">
+            <div class="summary-header">
+                <h2>Professional Expertise</h2>
+                <p>Bridging the gap between complex backend logic and seamless frontend experiences.</p>
+            </div>
+
+            <div class="summary-grid">
+                <div class="card-parent">
+                    <div class="card-m metallic">
+                        <div class="content-box">
+                            <span class="card-title">Full Stack Dev</span>
+                            <p class="card-content">
+                                Building scalable architectures using MERN stack, specialized in performance
+                                optimization and secure API design.
+                            </p>
+                            <span class="see-more">View Projects</span>
+                        </div>
+                        <div class="date-box">
+                            <span class="month">EXP</span>
+                            <span class="date">03</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-parent">
+                    <div class="card-m metallic">
+                        <div class="content-box">
+                            <span class="card-title">Team Handling</span>
+                            <p class="card-content">
+                                Expertise in leading cross-functional teams, optimizing workflows, and fostering
+                                a collaborative engineering culture.
+                            </p>
+                            <span class="see-more">View Projects</span>
+                        </div>
+                        <div class="date-box">
+                            <span class="month">EXP</span>
+                            <span class="date">04</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-parent">
+                    <div class="card-m metallic">
+                        <div class="content-box">
+                            <span class="card-title">Cloud & DevOps</span>
+                            <p class="card-content">
+                                Deploying and managing cloud infrastructure, ensuring 99.9% uptime
+                                through automated CI/CD pipelines.
+                            </p>
+                            <span class="see-more">View Projects</span>
+                        </div>
+                        <div class="date-box">
+                            <span class="month">EXP</span>
+                            <span class="date">02</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="skills" data-aos="fade-up">
             <h2>Technical Stack</h2>
@@ -194,39 +246,52 @@
         </section>
 
         <section id="newsletter" data-aos="fade-up">
-    <h2>Stay in the Loop</h2>
-    <div class="container_newsletter">
-        <div class="container-input-wrapper">
-            <div class="inner-box">
-                <div class="input-area">
-                    <input type="email" id="email_sub" name="email" placeholder="Your professional email...✦˚" required>
-                </div>
-                <div class="options">
-                    <div class="btns-add">
-                        <button title="Weekly Updates">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-                        </button>
-                        <button title="Tech Trends">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-                        </button>
+            <h2>Get out of the Loop</h2>
+            <div class="container_newsletter">
+                <div class="container-input-wrapper">
+                    <div class="inner-box">
+                        <div class="input-area">
+                            <input type="email" id="email_sub" name="email" placeholder="Your professional email...✦˚"
+                                required>
+                        </div>
+                        <div class="options">
+                            <div class="btns-add">
+                                <button title="Weekly Updates">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                </button>
+                                <button title="Tech Trends">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                                        <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="btn-submit" aria-label="Subscribe">
+                                <i>
+                                    <svg viewBox="0 0 512 512" width="20" height="20">
+                                        <path fill="currentColor"
+                                            d="M473 39.05a24 24 0 0 0-25.5-5.46L47.47 185h-.08a24 24 0 0 0 1 45.16l.41.13l137.3 58.63a16 16 0 0 0 15.54-3.59L422 80a7.07 7.07 0 0 1 10 10L226.66 310.26a16 16 0 0 0-3.59 15.54l58.65 137.38c.06.2.12.38.19.57c3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0 0 23-15.46L478.39 64.62A24 24 0 0 0 473 39.05">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </button>
+                        </div>
                     </div>
-                    <button class="btn-submit" aria-label="Subscribe">
-                        <i>
-                            <svg viewBox="0 0 512 512" width="20" height="20">
-                                <path fill="currentColor" d="M473 39.05a24 24 0 0 0-25.5-5.46L47.47 185h-.08a24 24 0 0 0 1 45.16l.41.13l137.3 58.63a16 16 0 0 0 15.54-3.59L422 80a7.07 7.07 0 0 1 10 10L226.66 310.26a16 16 0 0 0-3.59 15.54l58.65 137.38c.06.2.12.38.19.57c3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0 0 23-15.46L478.39 64.62A24 24 0 0 0 473 39.05"></path>
-                            </svg>
-                        </i>
-                    </button>
+                </div>
+                <div class="tags">
+                    <span class="tag-active">Tech News</span>
+                    <span>DSA Tips</span>
+                    <span>Web Dev</span>
                 </div>
             </div>
-        </div>
-        <div class="tags">
-            <span class="tag-active">Tech News</span>
-            <span>DSA Tips</span>
-            <span>Web Dev</span>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section id="projects">
             <h2>Featured Projects</h2>
@@ -282,8 +347,8 @@
     </main>
 
     <footer>
-        <p>© 2026 Mohan Shailendra Yadav — Full Stack Engineer. Built with <i class="fas fa-heart"
-                style="color: var(--primary);"></i> & modern web tech.</p>
+        <p>© 2026 Artist — Sketch Artist. Built with <i class="fas fa-heart" style="color: var(--primary);"></i> &
+            modern web tech.</p>
         <div style="margin-top: 8px; font-size: 0.75rem;">
             <i class="fab fa-linkedin"></i> <i class="fab fa-github"></i> <i class="fab fa-twitter"></i>
         </div>
