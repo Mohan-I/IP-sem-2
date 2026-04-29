@@ -98,6 +98,9 @@ a, button, .skill-badge, .see-more, .tags span {
   cursor: pointer;
 }
 
+a{
+  color: rgba(0, 255, 204, 0.6);
+}
 /* Custom Scrollbar - Neon */
 ::-webkit-scrollbar {
   width: 8px;
@@ -358,7 +361,7 @@ h2 i {
 
 /* Button Enhancements - Arcade Style */
 button {
-  padding: 12px 28px;
+  padding: 8px 12px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: var(--bg-header);
   font-weight: 700;
