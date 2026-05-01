@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohan Shailendra Yadav | Artist Web Template</title>
+    <title>Artist Web Template</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -45,14 +45,15 @@
         </nav>
     </header>
 
-
+    <div id="field"></div>
     <main>
         <section id="hero">
             <div class="hero-container">
                 <div class="hero-text-side animate-slide-left">
                     <h1>The Artist <br /><u>Engineer</u></h1>
                     <br />
-                    <p class="subtitle">Full Stack Engineer | Graphic Designer | MCA @ TCET</p>
+                    <p class="subtitle">Please meet with Videaste landing page concept, Videaste is an exploration
+                        design for videographer portfolio with a modern approach</p>
 
                     <div class="contact-info">
                         <span>📍 Mumbai, India</span> |
@@ -62,16 +63,10 @@
 
                 <div class="hero-image-side animate-slide-right">
                     <div class="image-wrapper">
-                        <img src="./assets/images/hero-img.png" alt="artist">
+                        <img src="./assets/images/rafaella-mendes-diniz-et_78QkMMQs-unsplash.webp" alt="artist">
                     </div>
 
-                    <div class="newsletter-box">
-                        <p>Stay updated with my latest projects</p>
-                        <form class="newsletter-form input-group">
-                            <input type="email" placeholder="Enter your email" required>
-                            <button type="submit">Get In Touch</button>
-                        </form>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -97,24 +92,9 @@
 
         <section id="summary" data-aos="fade-up">
             <div class="summary-container">
-                <div class="summary-visual">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card-animated">
-                            <div class="ray"></div>
-                            <div class="text">Sketch</div>
-                            <div>Artist</div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="summary-text">
                     <h2>Professional Summary</h2>
-                    <h4 class="subheading">Just Something About Me....</h4>
                     <div class="card">
                         <p>
                             Dynamic <strong class="badge">MCA Student</strong> and <strong class="badge">Full Stack
@@ -127,6 +107,14 @@
                             experiences with modern JavaScript frameworks.
                         </p>
                     </div>
+                </div>
+
+                <div class="newsletter-box">
+                    <p>Stay updated with my latest projects</p>
+                    <form class="newsletter-form input-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Get In Touch</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -337,11 +325,9 @@
                             Message</button>
                     </form>
                 </div>
-                <div class="card contact-map">
-                    <iframe
+                <div class="card contact-map"><iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109925749698!3d19.081966716222594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1712150000000!5m2!1sen!2sin"
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                        loading="lazy" style="width:100%; height:100%; border:0;" allowfullscreen></iframe></div>
             </div>
         </section>
     </main>
@@ -354,32 +340,8 @@
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.querySelector('#mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            menuToggle.classList.toggle('is-active');
-        });
-
-        document.querySelectorAll('.navlinks a').forEach(link => {
-            navLinks.classList.remove('active');
-            menuToggle.classList.remove('is-active');
-        });
-
-
-        window.addEventListener("load", () => {
-            const loader = document.querySelector(".loader-wrapper");
-
-            // Add a slight delay (e.g., 500ms) so the user actually sees the 
-            // cool animation if the site loads too fast.
-            setTimeout(() => {
-                loader.classList.add("loader-hidden");
-            }, 500);
-        });
-    </script>
     <script src="./assets/javascript/aos.js"></script>
+    <script src="./assets/javascript/main.js"></script>
     <script>
         AOS.init();
     </script>

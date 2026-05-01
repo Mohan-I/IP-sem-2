@@ -6,7 +6,7 @@ menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('is-active');
 });
 
-document.querySelectorAll('.navlinks a'). forEach(link => {
+document.querySelectorAll('.navlinks a').forEach(link => {
     navLinks.classList.remove('active');
     menuToggle.classList.remove('is-active');
 });
@@ -21,3 +21,4 @@ window.addEventListener("load", () => {
         loader.classList.add("loader-hidden");
     }, 500);
 });
+
